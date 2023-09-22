@@ -37,6 +37,8 @@ public abstract class Creature {
     }
 
     public void hitOnSuccess(Creature creature) {
+        if(creature == null)
+            throw new NullPointerException("Creature should be non null");
         if(isAlive()) {
             int attackModifier = attack - creature.defence + 1;
             if (isSuccessfulHit(attackModifier)) {
@@ -78,6 +80,8 @@ public abstract class Creature {
     }
 
     public void raiseHealth(double rate) {
+        if(rate < 0)
+            throw new IllegalArgumentException("Rate must be non-negative");
         health = health + (int)(rate*maxHealth);
     }
 
