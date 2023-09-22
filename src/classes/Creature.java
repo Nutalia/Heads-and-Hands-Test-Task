@@ -1,4 +1,4 @@
-package HeadsAndHands.classes;
+package classes;
 
 import java.util.Random;
 
@@ -74,7 +74,7 @@ public abstract class Creature {
     }
 
     private int randomDamage() {
-        return new Random().nextInt(minDamage, maxDamage);
+        return new Random().nextInt(minDamage, maxDamage+1);
     }
 
     public void raiseHealth(double rate) {

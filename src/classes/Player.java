@@ -1,4 +1,4 @@
-package HeadsAndHands.classes;
+package classes;
 
 public class Player extends Creature{
     int healingLeft;

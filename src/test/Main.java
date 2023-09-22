@@ -1,7 +1,7 @@
-package HeadsAndHands.test;
+package test;
 
-import HeadsAndHands.classes.Monster;
-import HeadsAndHands.classes.Player;
+import classes.Monster;
+import classes.Player;
 
 public class Main {
     public static void main(String[] args) {
