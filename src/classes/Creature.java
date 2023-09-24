@@ -6,7 +6,7 @@ public abstract class Creature {
     public static final int maxHealth = 100;
     private final int attack;
     private final int defence;
-    private int health;
+    protected int health;
     private final int minDamage;
     private final int maxDamage;
 
@@ -77,12 +77,6 @@ public abstract class Creature {
 
     private int randomDamage() {
         return new Random().nextInt(minDamage, maxDamage+1);
-    }
-
-    public void raiseHealth(double rate) {
-        if(rate < 0)
-            throw new IllegalArgumentException("Rate must be non-negative");
-        health = health + (int)(rate*maxHealth);
     }
 
     public int getHealth() {

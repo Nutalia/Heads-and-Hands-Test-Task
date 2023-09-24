@@ -9,7 +9,7 @@ public class Player extends Creature{
 
     public void heal() {
         if(isAlive() && couldHeal()) {
-            raiseHealth(0.3);
+            health += 0.3*maxHealth;
             healingLeft--;
         }
     }
